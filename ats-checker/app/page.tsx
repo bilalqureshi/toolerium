@@ -242,18 +242,33 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center mt-6">
-            <p className="text-sm font-medium text-blue-700 mb-1">
-              Resume optimized? Now write the perfect cover letter →
-            </p>
-            <a
-              href="https://cover-letter-gen-rho.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 text-sm underline"
-            >
-              Free AI Cover Letter Generator
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+              <p className="text-sm font-medium text-blue-700 mb-1">
+                Resume optimized? Now write the perfect cover letter →
+              </p>
+              <a
+                href="https://cover-letter-gen-rho.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-sm underline"
+              >
+                Free AI Cover Letter Generator
+              </a>
+            </div>
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+              <p className="text-sm font-medium text-blue-700 mb-1">
+                Make your LinkedIn profile match your resume →
+              </p>
+              <a
+                href="https://linkedin-profile-optimizer.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-sm underline"
+              >
+                Free LinkedIn Profile Optimizer
+              </a>
+            </div>
           </div>
 
           {/* How It Works */}

@@ -409,18 +409,33 @@ export default function Home() {
           )}
 
           {/* Cross-sell */}
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
-            <p className="text-sm text-blue-700 font-medium mb-1">
-              Also check your resume ATS score before you apply →
-            </p>
-            <a
-              href="https://ats-checker-lake.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 text-sm underline"
-            >
-              Free ATS Resume Checker — See Your Score Instantly
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+              <p className="text-sm text-blue-700 font-medium mb-1">
+                Also check your resume ATS score before you apply →
+              </p>
+              <a
+                href="https://ats-checker-lake.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-sm underline"
+              >
+                Free ATS Resume Checker
+              </a>
+            </div>
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+              <p className="text-sm text-blue-700 font-medium mb-1">
+                Make your LinkedIn profile stand out to recruiters →
+              </p>
+              <a
+                href="https://linkedin-profile-optimizer.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-sm underline"
+              >
+                Free LinkedIn Profile Optimizer
+              </a>
+            </div>
           </div>
 
           {/* How It Works */}
