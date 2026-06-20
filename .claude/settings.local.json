@@ -9,7 +9,8 @@
       "Bash(ls /Users/bilalmuhammadqureshi/Projects/claude-skills/)",
       "mcp__visualize__read_me",
       "mcp__visualize__show_widget",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npx tsc *)"
     ]
   }
 }

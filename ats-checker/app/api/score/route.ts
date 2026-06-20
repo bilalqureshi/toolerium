@@ -1,15 +1,10 @@
-import { getClaudeClient } from "@/lib/claude";
+import { getAIModel } from "@/lib/claude";
 
 export async function POST(req: Request) {
   const { resume, job } = await req.json();
 
-  const response = await getClaudeClient().messages.create({
-    model: "claude-opus-4-8",
-    max_tokens: 1000,
-    messages: [
-      {
-        role: "user",
-        content: `Analyze this resume against the job description.
+  const model = getAIModel(true);
+  const result = await model.generateContent(`Analyze this resume against the job description.
 Respond ONLY with valid JSON, no markdown, no explanation.
 
 {
@@ -22,12 +17,9 @@ Resume:
 ${resume}
 
 Job Description:
-${job}`,
-      },
-    ],
-  });
+${job}`);
 
-  const text = response.content[0].type === "text" ? response.content[0].text.trim() : "";
+  const text = result.response.text().trim();
   const clean = text.replace(/```json|```/g, "").trim();
   return Response.json(JSON.parse(clean));
 }

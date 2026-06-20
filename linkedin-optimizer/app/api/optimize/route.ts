@@ -1,4 +1,4 @@
-import { getClaudeClient } from "@/lib/claude";
+import { getAIModel } from "@/lib/claude";
 
 export async function POST(req: Request) {
   try {
@@ -11,13 +11,8 @@ export async function POST(req: Request) {
       );
     }
 
-    const response = await getClaudeClient().messages.create({
-      model: "claude-opus-4-8",
-      max_tokens: 2000,
-      messages: [
-        {
-          role: "user",
-          content: `Rewrite this LinkedIn profile to maximize recruiter appeal and LinkedIn search visibility for the target role.
+    const model = getAIModel(true);
+    const result = await model.generateContent(`Rewrite this LinkedIn profile to maximize recruiter appeal and LinkedIn search visibility for the target role.
 Respond ONLY with valid JSON — no markdown, no explanation, no code fences.
 
 {
@@ -39,15 +34,9 @@ Current Headline:
 ${headline || "(not provided)"}
 
 Current About / Summary:
-${about || "(not provided)"}`,
-        },
-      ],
-    });
+${about || "(not provided)"}`);
 
-    const text =
-      response.content[0].type === "text"
-        ? response.content[0].text.trim()
-        : "";
+    const text = result.response.text().trim();
     const clean = text.replace(/```json|```/g, "").trim();
     const parsed = JSON.parse(clean);
 
