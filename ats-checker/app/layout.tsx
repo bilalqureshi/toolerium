@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -83,6 +82,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4727099105535137"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <nav className="bg-white border-b px-6 py-3 flex items-center justify-between sticky top-0 z-10">
           <a href="/" className="font-bold text-gray-900 text-lg">
@@ -97,26 +103,30 @@ export default function RootLayout({
             </a>
           </div>
         </nav>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4727099105535137"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         {children}
         <Analytics />
         <footer className="mt-8 border-t pt-8 pb-8 px-6">
           <div className="max-w-3xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-sm text-gray-500">
-                <p className="font-semibold text-gray-700 mb-1">ATS Resume Checker</p>
+                <p className="font-semibold text-gray-700 mb-1">
+                  ATS Resume Checker
+                </p>
                 <p>Free AI-powered resume scoring and optimization tool.</p>
               </div>
               <div className="flex gap-6 text-sm text-gray-500">
-                <a href="/" className="hover:text-gray-800">Home</a>
-                <a href="/about" className="hover:text-gray-800">About</a>
-                <a href="/privacy" className="hover:text-gray-800">Privacy</a>
-                <a href="/terms" className="hover:text-gray-800">Terms</a>
+                <a href="/" className="hover:text-gray-800">
+                  Home
+                </a>
+                <a href="/about" className="hover:text-gray-800">
+                  About
+                </a>
+                <a href="/privacy" className="hover:text-gray-800">
+                  Privacy
+                </a>
+                <a href="/terms" className="hover:text-gray-800">
+                  Terms
+                </a>
               </div>
             </div>
             <p className="text-center text-xs text-gray-400 mt-6">
