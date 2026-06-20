@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -94,6 +95,12 @@ export default function RootLayout({
             </a>
           </div>
         </nav>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4727099105535137"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         {children}
         <Analytics />
         <footer className="mt-8 border-t pt-8 pb-8 px-6">

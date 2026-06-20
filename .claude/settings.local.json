@@ -6,7 +6,9 @@
       "Bash(git push *)",
       "Skill(claude-api)",
       "Skill(claude-api:*)",
-      "Bash(ls /Users/bilalmuhammadqureshi/Projects/claude-skills/)"
+      "Bash(ls /Users/bilalmuhammadqureshi/Projects/claude-skills/)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
     ]
   }
 }
