@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     "Learn about LinkedIn Profile Optimizer — the free AI tool that helps professionals score their LinkedIn bio and headline, find missing recruiter keywords, and get a fully optimized profile.",
   alternates: {
-    canonical: "https://linkedin-profile-optimizer.vercel.app/about",
+    canonical: "https://linkedin-optimizer-livid.vercel.app/about",
   },
   openGraph: {
     title: "About — LinkedIn Profile Optimizer",
     description:
       "The free tool that helps professionals score their LinkedIn profile, find missing keywords, and get an AI-optimized bio and headline.",
-    url: "https://linkedin-profile-optimizer.vercel.app/about",
+    url: "https://linkedin-optimizer-livid.vercel.app/about",
   },
 };
 
@@ -39,13 +39,15 @@ export default function About() {
           <p className="text-gray-600">
             Our goal is simple: give every professional an honest, specific
             profile strength score for free — and offer an affordable AI rewrite
-            for those who want their headline and bio professionally optimized to
-            attract the right opportunities.
+            for those who want their headline and bio professionally optimized
+            to attract the right opportunities.
           </p>
         </div>
 
         <div className="bg-white rounded-2xl border p-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">What We Offer</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            What We Offer
+          </h2>
           <ul className="space-y-4 text-gray-600">
             {[
               {
@@ -104,9 +106,12 @@ export default function About() {
               rel="noopener noreferrer"
               className="block p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition"
             >
-              <p className="font-semibold text-gray-900">Free ATS Resume Checker</p>
+              <p className="font-semibold text-gray-900">
+                Free ATS Resume Checker
+              </p>
               <p className="text-sm text-gray-500 mt-1">
-                Score your resume against any job description and see every missing keyword.
+                Score your resume against any job description and see every
+                missing keyword.
               </p>
             </a>
             <a
@@ -115,9 +120,12 @@ export default function About() {
               rel="noopener noreferrer"
               className="block p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition"
             >
-              <p className="font-semibold text-gray-900">Free AI Cover Letter Generator</p>
+              <p className="font-semibold text-gray-900">
+                Free AI Cover Letter Generator
+              </p>
               <p className="text-sm text-gray-500 mt-1">
-                Generate a tailored, ATS-friendly cover letter for any job in seconds.
+                Generate a tailored, ATS-friendly cover letter for any job in
+                seconds.
               </p>
             </a>
           </div>
@@ -126,7 +134,8 @@ export default function About() {
         <div className="bg-white rounded-2xl border p-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Contact</h2>
           <p className="text-gray-600 mb-2">
-            Have a question, feedback, or a feature request? We'd love to hear from you.
+            Have a question, feedback, or a feature request? We'd love to hear
+            from you.
           </p>
           <a
             href="mailto:bqtools92@gmail.com"

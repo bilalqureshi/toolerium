@@ -3,11 +3,12 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
 // TODO: Replace with your actual Vercel URL after first deploy
-const SITE_URL = "https://linkedin-profile-optimizer.vercel.app";
+const SITE_URL = "https://linkedin-optimizer-livid.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Free LinkedIn Profile Optimizer — AI-Powered Bio & Headline Generator",
+  title:
+    "Free LinkedIn Profile Optimizer — AI-Powered Bio & Headline Generator",
   description:
     "Optimize your LinkedIn bio, headline, and About section with AI. Get a profile strength score, missing keywords, and a fully rewritten profile that attracts recruiters. Free to try, $5 to unlock.",
   keywords: [
@@ -116,10 +117,18 @@ export default function RootLayout({
                 <p>Free AI-powered LinkedIn bio and headline optimizer.</p>
               </div>
               <div className="flex gap-6 text-sm text-gray-500">
-                <a href="/" className="hover:text-gray-800">Home</a>
-                <a href="/about" className="hover:text-gray-800">About</a>
-                <a href="/privacy" className="hover:text-gray-800">Privacy</a>
-                <a href="/terms" className="hover:text-gray-800">Terms</a>
+                <a href="/" className="hover:text-gray-800">
+                  Home
+                </a>
+                <a href="/about" className="hover:text-gray-800">
+                  About
+                </a>
+                <a href="/privacy" className="hover:text-gray-800">
+                  Privacy
+                </a>
+                <a href="/terms" className="hover:text-gray-800">
+                  Terms
+                </a>
               </div>
             </div>
             <p className="text-center text-xs text-gray-400 mt-6">

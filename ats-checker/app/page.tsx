@@ -229,12 +229,30 @@ export default function Home() {
               className="w-full bg-black text-white py-4 rounded-xl font-semibold text-base hover:bg-gray-800 transition disabled:opacity-60 flex items-center justify-center gap-3"
             >
               {loading && (
-                <svg className="animate-spin h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                <svg
+                  className="animate-spin h-5 w-5 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                  />
                 </svg>
               )}
-              {loading ? "Analyzing your resume against ATS..." : "Check My ATS Score Free →"}
+              {loading
+                ? "Analyzing your resume against ATS..."
+                : "Check My ATS Score Free →"}
             </button>
 
             <p className="text-center text-xs text-gray-400 mt-3">
@@ -261,7 +279,7 @@ export default function Home() {
                 Make your LinkedIn profile match your resume →
               </p>
               <a
-                href="https://linkedin-profile-optimizer.vercel.app"
+                href="https://linkedin-optimizer-livid.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 text-sm underline"
@@ -277,7 +295,8 @@ export default function Home() {
               How the ATS Resume Checker Works
             </h2>
             <p className="text-center text-gray-500 text-sm mb-8">
-              Three steps. Ten seconds. A complete ATS compatibility report — free.
+              Three steps. Ten seconds. A complete ATS compatibility report —
+              free.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-2xl border p-6 text-center">
@@ -424,7 +443,8 @@ export default function Home() {
               Frequently Asked Questions — ATS Resume Checker
             </h2>
             <p className="text-gray-500 text-sm">
-              Everything you need to know about ATS systems and how to optimize your resume.
+              Everything you need to know about ATS systems and how to optimize
+              your resume.
             </p>
             {[
               {

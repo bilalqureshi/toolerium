@@ -155,8 +155,7 @@ export default function Home() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const isPaid =
-      params.get("paid") === "true" ||
-      localStorage.getItem("paid") === "true";
+      params.get("paid") === "true" || localStorage.getItem("paid") === "true";
 
     if (params.get("paid") === "true") {
       localStorage.setItem("paid", "true");
@@ -330,12 +329,30 @@ export default function Home() {
               className="w-full bg-black text-white py-4 rounded-xl font-semibold hover:bg-gray-800 transition disabled:opacity-60 flex items-center justify-center gap-3"
             >
               {loading && (
-                <svg className="animate-spin h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                <svg
+                  className="animate-spin h-5 w-5 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                  />
                 </svg>
               )}
-              {loading ? "Generating your cover letter..." : "Generate My Cover Letter Free →"}
+              {loading
+                ? "Generating your cover letter..."
+                : "Generate My Cover Letter Free →"}
             </button>
 
             <p className="text-center text-xs text-gray-400">
@@ -392,12 +409,30 @@ export default function Home() {
                       className="bg-black text-white px-8 py-3 rounded-xl font-semibold hover:bg-gray-800 transition disabled:opacity-60 flex items-center justify-center gap-3"
                     >
                       {payLoading && (
-                        <svg className="animate-spin h-4 w-4 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        <svg
+                          className="animate-spin h-4 w-4 shrink-0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                          />
                         </svg>
                       )}
-                      {payLoading ? "Redirecting to checkout..." : "Unlock Full Cover Letter — $3"}
+                      {payLoading
+                        ? "Redirecting to checkout..."
+                        : "Unlock Full Cover Letter — $3"}
                     </button>
                     <p className="text-gray-400 text-xs mt-3">
                       One-time payment. Instant download.
@@ -428,7 +463,7 @@ export default function Home() {
                 Make your LinkedIn profile stand out to recruiters →
               </p>
               <a
-                href="https://linkedin-profile-optimizer.vercel.app"
+                href="https://linkedin-optimizer-livid.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 text-sm underline"
@@ -444,7 +479,8 @@ export default function Home() {
               How the AI Cover Letter Generator Works
             </h2>
             <p className="text-center text-gray-500 text-sm mb-8">
-              Three steps. Under a minute. A professional, tailored cover letter — free.
+              Three steps. Under a minute. A professional, tailored cover letter
+              — free.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-2xl border p-6 text-center">
@@ -560,7 +596,8 @@ export default function Home() {
               Frequently Asked Questions — AI Cover Letter Generator
             </h2>
             <p className="text-gray-500 text-sm">
-              Everything you need to know about writing a great cover letter with AI.
+              Everything you need to know about writing a great cover letter
+              with AI.
             </p>
             {[
               {

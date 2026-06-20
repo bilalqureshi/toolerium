@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Terms of service for LinkedIn Profile Optimizer. Read our usage terms, payment policy, and legal disclaimers.",
   alternates: {
-    canonical: "https://linkedin-profile-optimizer.vercel.app/terms",
+    canonical: "https://linkedin-optimizer-livid.vercel.app/terms",
   },
   robots: { index: false, follow: false },
 };
@@ -16,14 +16,16 @@ export default function Terms() {
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-2xl border p-8 space-y-6">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Terms of Service</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              Terms of Service
+            </h1>
             <p className="text-sm text-gray-400">Last updated: June 2025</p>
           </div>
 
           <p className="text-gray-600">
-            These Terms of Service ("Terms") govern your use of the LinkedIn Profile Optimizer
-            website and services ("Service"). By accessing or using our Service, you agree to
-            be bound by these Terms.
+            These Terms of Service ("Terms") govern your use of the LinkedIn
+            Profile Optimizer website and services ("Service"). By accessing or
+            using our Service, you agree to be bound by these Terms.
           </p>
 
           {[
@@ -69,7 +71,7 @@ export default function Terms() {
             },
             {
               title: "11. Changes to Terms",
-              body: 'We reserve the right to modify these Terms at any time. Changes are effective immediately upon posting. Your continued use of the Service after changes are posted constitutes acceptance of the updated Terms.',
+              body: "We reserve the right to modify these Terms at any time. Changes are effective immediately upon posting. Your continued use of the Service after changes are posted constitutes acceptance of the updated Terms.",
             },
             {
               title: "12. Contact",
@@ -77,8 +79,12 @@ export default function Terms() {
             },
           ].map((section, i) => (
             <div key={i}>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">{section.title}</h2>
-              <p className={`text-gray-600 ${i === 11 ? "font-semibold text-gray-900" : ""}`}>
+              <h2 className="text-xl font-semibold text-gray-900 mb-3">
+                {section.title}
+              </h2>
+              <p
+                className={`text-gray-600 ${i === 11 ? "font-semibold text-gray-900" : ""}`}
+              >
                 {section.body}
               </p>
             </div>

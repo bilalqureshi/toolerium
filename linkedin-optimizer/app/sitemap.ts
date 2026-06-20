@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const SITE_URL = "https://linkedin-profile-optimizer.vercel.app";
+const SITE_URL = "https://linkedin-optimizer-livid.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

@@ -6,7 +6,7 @@ const structuredData = [
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "LinkedIn Profile Optimizer",
-    url: "https://linkedin-profile-optimizer.vercel.app",
+    url: "https://linkedin-optimizer-livid.vercel.app/",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Any",
     description:
@@ -141,7 +141,9 @@ export default function Home() {
       return;
     }
     if (!headline.trim() && !about.trim()) {
-      setError("Please paste at least your LinkedIn headline or About section.");
+      setError(
+        "Please paste at least your LinkedIn headline or About section.",
+      );
       return;
     }
     setError("");
@@ -167,12 +169,14 @@ export default function Home() {
 
       localStorage.setItem(
         "li_result",
-        JSON.stringify({ ...data, headline, about, targetRole, skills })
+        JSON.stringify({ ...data, headline, about, targetRole, skills }),
       );
       window.location.href = "/result";
     } catch (err: unknown) {
       setError(
-        err instanceof Error ? err.message : "Something went wrong. Please try again."
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.",
       );
       setLoading(false);
     }
@@ -194,17 +198,16 @@ export default function Home() {
             Free LinkedIn Profile Optimizer — Get Found by Recruiters
           </h1>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Most LinkedIn profiles are invisible to recruiters because they
-            lack the right keywords. Get your profile strength score, see
-            exactly what's missing, and unlock an AI-rewritten bio and
-            headline in seconds.
+            Most LinkedIn profiles are invisible to recruiters because they lack
+            the right keywords. Get your profile strength score, see exactly
+            what's missing, and unlock an AI-rewritten bio and headline in
+            seconds.
           </p>
         </div>
 
         {/* Form */}
         <div className="max-w-3xl mx-auto px-6 py-12">
           <div className="bg-white rounded-2xl shadow-sm border p-8 space-y-6">
-
             {/* Target Role */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1">
@@ -228,7 +231,8 @@ export default function Home() {
                 Current LinkedIn Headline
               </label>
               <p className="text-xs text-gray-400 mb-2">
-                The line that appears under your name on LinkedIn (max 220 chars)
+                The line that appears under your name on LinkedIn (max 220
+                chars)
               </p>
               <div className="relative">
                 <input
@@ -365,7 +369,8 @@ export default function Home() {
               How the LinkedIn Profile Optimizer Works
             </h2>
             <p className="text-center text-gray-500 text-sm mb-8">
-              Three steps. Ten seconds. A complete profile strength report — free.
+              Three steps. Ten seconds. A complete profile strength report —
+              free.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
@@ -385,7 +390,10 @@ export default function Home() {
                   body: "Receive a profile strength score, missing keywords, and 3 specific improvements — free. Unlock the full rewrite for $5.",
                 },
               ].map((item, i) => (
-                <div key={i} className="bg-white rounded-2xl border p-6 text-center">
+                <div
+                  key={i}
+                  className="bg-white rounded-2xl border p-6 text-center"
+                >
                   <div className="text-3xl mb-3">{item.icon}</div>
                   <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-500">{item.body}</p>
@@ -401,10 +409,26 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
-                { stat: "87%", label: "of recruiters use LinkedIn to find and vet candidates" },
-                { stat: "40×", label: "more job opportunities with a complete LinkedIn profile" },
-                { stat: "71%", label: "of professionals say LinkedIn is their primary job search tool" },
-                { stat: "3×", label: "more profile views with a keyword-optimized headline and bio" },
+                {
+                  stat: "87%",
+                  label:
+                    "of recruiters use LinkedIn to find and vet candidates",
+                },
+                {
+                  stat: "40×",
+                  label:
+                    "more job opportunities with a complete LinkedIn profile",
+                },
+                {
+                  stat: "71%",
+                  label:
+                    "of professionals say LinkedIn is their primary job search tool",
+                },
+                {
+                  stat: "3×",
+                  label:
+                    "more profile views with a keyword-optimized headline and bio",
+                },
               ].map((item, i) => (
                 <div key={i}>
                   <p className="text-3xl font-bold text-black">{item.stat}</p>
@@ -420,7 +444,8 @@ export default function Home() {
               10 LinkedIn Profile Tips That Actually Get You Found
             </h2>
             <p className="text-gray-500 text-sm mb-6">
-              Use these strategies to rank higher in recruiter searches and get more profile views.
+              Use these strategies to rank higher in recruiter searches and get
+              more profile views.
             </p>
             <div className="space-y-4">
               {[
@@ -491,7 +516,8 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-500 text-sm">
-              Everything you need to know about optimizing your LinkedIn profile.
+              Everything you need to know about optimizing your LinkedIn
+              profile.
             </p>
             {[
               {
