@@ -1,4 +1,4 @@
-import { getAIModel } from "@/lib/claude";
+import { getAIClient, AI_MODEL } from "@/lib/claude";
 
 export async function POST(req: Request) {
   try {
@@ -18,8 +18,14 @@ export async function POST(req: Request) {
       );
     }
 
-    const model = getAIModel(true);
-    const result = await model.generateContent(`Analyze this LinkedIn profile for the target role. Be honest and specific.
+    const completion = await getAIClient().chat.completions.create({
+      model: AI_MODEL,
+      max_tokens: 1000,
+      response_format: { type: "json_object" },
+      messages: [
+        {
+          role: "user",
+          content: `Analyze this LinkedIn profile for the target role. Be honest and specific.
 Respond ONLY with valid JSON — no markdown, no explanation, no code fences.
 
 {
@@ -42,12 +48,13 @@ Current Headline:
 ${headline || "(not provided)"}
 
 Current About / Summary:
-${about || "(not provided)"}`);
+${about || "(not provided)"}`,
+        },
+      ],
+    });
 
-    const text = result.response.text().trim();
-    const clean = text.replace(/```json|```/g, "").trim();
-    const parsed = JSON.parse(clean);
-
+    const text = completion.choices[0].message.content ?? "";
+    const parsed = JSON.parse(text);
     return Response.json(parsed);
   } catch (err) {
     console.error("Analyze error:", err);

@@ -1,10 +1,16 @@
-import { getAIModel } from "@/lib/claude";
+import { getAIClient, AI_MODEL } from "@/lib/claude";
 
 export async function POST(req: Request) {
   const { resume, job } = await req.json();
 
-  const model = getAIModel(true);
-  const result = await model.generateContent(`Analyze this resume against the job description.
+  const completion = await getAIClient().chat.completions.create({
+    model: AI_MODEL,
+    max_tokens: 1000,
+    response_format: { type: "json_object" },
+    messages: [
+      {
+        role: "user",
+        content: `Analyze this resume against the job description.
 Respond ONLY with valid JSON, no markdown, no explanation.
 
 {
@@ -17,9 +23,11 @@ Resume:
 ${resume}
 
 Job Description:
-${job}`);
+${job}`,
+      },
+    ],
+  });
 
-  const text = result.response.text().trim();
-  const clean = text.replace(/```json|```/g, "").trim();
-  return Response.json(JSON.parse(clean));
+  const text = completion.choices[0].message.content ?? "";
+  return Response.json(JSON.parse(text));
 }

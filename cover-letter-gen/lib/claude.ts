@@ -1,17 +1,12 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import Groq from "groq-sdk";
 
-let genAI: GoogleGenerativeAI | null = null;
+let groq: Groq | null = null;
 
-function getGenAI() {
-  if (!genAI) {
-    genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+export function getAIClient() {
+  if (!groq) {
+    groq = new Groq({ apiKey: process.env.GROQ_API_KEY! });
   }
-  return genAI;
+  return groq;
 }
 
-export function getAIModel(jsonMode = false) {
-  return getGenAI().getGenerativeModel({
-    model: "gemini-2.0-flash",
-    ...(jsonMode ? { generationConfig: { responseMimeType: "application/json" } } : {}),
-  });
-}
+export const AI_MODEL = "llama-3.3-70b-versatile";
