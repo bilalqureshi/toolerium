@@ -204,6 +204,49 @@ function ResultContent() {
           </div>
         )}
 
+        {/* Cross-sell */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+            <p className="text-sm font-medium text-blue-700 mb-1">
+              Resume ready? Write the cover letter →
+            </p>
+            <a
+              href="https://cover-letter-gen-rho.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 text-sm underline"
+            >
+              Free AI Cover Letter Generator
+            </a>
+          </div>
+          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+            <p className="text-sm font-medium text-blue-700 mb-1">
+              Interview coming up? Prep with AI →
+            </p>
+            <a
+              href="https://interview-prep-ai.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 text-sm underline"
+            >
+              Free AI Interview Prep
+            </a>
+          </div>
+          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+            <p className="text-sm font-medium text-blue-700 mb-1">
+              Need to compress your resume PDF? →
+            </p>
+            <a
+              href="https://pdf-compressor-ecru-two.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 text-sm underline"
+            >
+              Free PDF Compressor
+            </a>
+          </div>
+        </div>
+
         <button
           onClick={() => (window.location.href = "/")}
           className="w-full text-center text-sm text-gray-400 hover:text-gray-600 py-2"

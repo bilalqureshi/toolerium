@@ -371,7 +371,7 @@ function ResultContent() {
         )}
 
         {/* Cross-sell */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-gray-50 border rounded-2xl p-5 text-center">
             <p className="text-sm font-medium text-gray-700 mb-1">
               Now optimize your resume for ATS →
@@ -396,6 +396,19 @@ function ResultContent() {
               className="text-blue-600 text-sm underline"
             >
               Free AI Cover Letter Generator
+            </a>
+          </div>
+          <div className="bg-gray-50 border rounded-2xl p-5 text-center">
+            <p className="text-sm font-medium text-gray-700 mb-1">
+              Interview coming up? Prep with AI questions →
+            </p>
+            <a
+              href="https://interview-prep-ai.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 text-sm underline"
+            >
+              Free AI Interview Prep
             </a>
           </div>
           <div className="bg-gray-50 border rounded-2xl p-5 text-center">

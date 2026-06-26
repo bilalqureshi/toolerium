@@ -22,7 +22,8 @@
       "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|linkedin\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app/result/page.tsx)",
       "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|cover.letter\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/linkedin-optimizer/app/result/page.tsx)",
       "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|linkedin\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app/page.tsx)",
-      "Bash(grep -n \"\\\\$3\\\\|one-time\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app/about/page.tsx)"
+      "Bash(grep -n \"\\\\$3\\\\|one-time\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app/about/page.tsx)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects status --short)"
     ]
   }
 }
