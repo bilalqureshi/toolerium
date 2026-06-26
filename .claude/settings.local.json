@@ -23,7 +23,25 @@
       "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|cover.letter\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/linkedin-optimizer/app/result/page.tsx)",
       "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|linkedin\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app/page.tsx)",
       "Bash(grep -n \"\\\\$3\\\\|one-time\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app/about/page.tsx)",
-      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects status --short)"
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects status --short)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects ls-files --error-unmatch \"interview-prep/node_modules\")",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects rm -r --cached interview-prep/node_modules)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects show --stat b32feb73)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects show --stat 5cd0193d)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects reset HEAD -- interview-prep/node_modules)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects reset HEAD -- interview-prep/tsconfig.tsbuildinfo)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects add interview-prep/postcss.config.mjs)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects commit -m ' *)",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects push)",
+      "Bash(xargs sed -i '' 's|https://interview-prep-ai\\\\.vercel\\\\.app|https://interview-prep-six-gules.vercel.app|g')",
+      "Bash(git -C /Users/bilalmuhammadqureshi/Projects/tools-projects add interview-prep/app/layout.tsx interview-prep/app/sitemap.ts interview-prep/app/robots.ts interview-prep/app/api/checkout/route.ts interview-prep/app/page.tsx interview-prep/app/about/page.tsx interview-prep/app/privacy/page.tsx interview-prep/app/terms/page.tsx ats-checker/app/result/page.tsx cover-letter-gen/app/page.tsx linkedin-optimizer/app/result/page.tsx)",
+      "Read(//Users/bilalmuhammadqureshi/.claude/**)",
+      "Read(//Users/bilalmuhammadqureshi/**)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Add Google Search Console verification file for interview-prep *)",
+      "Bash(git commit -m 'Update HANDOFF.md — interview-prep live, GSC verification, pSEO role pages done *)",
+      "Bash(mkdir -p /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app/for/\\\\[role\\\\])",
+      "Bash(mkdir -p /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app/for/\\\\[role\\\\])"
     ]
   }
 }

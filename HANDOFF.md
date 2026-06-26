@@ -326,8 +326,8 @@ Each Vercel project needs ONE env var:
 
 ### Phase 2 — SEO Expansion
 - [x] 17. Interview Prep `/for/[role]/` — 15 role pages DONE ✅
-- [ ] 18. Add `/for/[role]/page.tsx` to ATS Checker — same 15 roles, unique content per page
-- [ ] 19. Add `/for/[role]/page.tsx` to Cover Letter Gen — same 15 roles
+- [x] 18. Add `/for/[role]/page.tsx` to ATS Checker — same 15 roles, unique content per page ✅
+- [x] 19. Add `/for/[role]/page.tsx` to Cover Letter Gen — same 15 roles ✅
 
 ### Phase 3 — Build Interview Prep Tool ✅ DONE
 - [x] 20. Scaffold `interview-prep/` ✅
