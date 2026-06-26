@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
-const SITE_URL = "https://pdf-compressor-mbq.vercel.app";
+const SITE_URL = "https://pdf-compressor-ecru-two.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

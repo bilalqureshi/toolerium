@@ -1,9 +1,20 @@
 import { MetadataRoute } from "next";
 
-const SITE_URL = "https://pdf-compressor-mbq.vercel.app";
+const SITE_URL = "https://pdf-compressor-ecru-two.vercel.app";
+
+const USE_CASES = [
+  "pdf-for-whatsapp",
+  "pdf-for-email",
+  "pdf-to-1mb",
+  "reduce-pdf-size",
+  "large-pdf",
+  "pdf-online",
+  "pdf-to-200kb",
+  "pdf-without-losing-quality",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
       lastModified: new Date(),
@@ -29,4 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
   ];
+
+  const useCaseRoutes: MetadataRoute.Sitemap = USE_CASES.map((useCase) => ({
+    url: `${SITE_URL}/compress/${useCase}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...useCaseRoutes];
 }

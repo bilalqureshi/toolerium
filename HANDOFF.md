@@ -53,11 +53,16 @@
 - **Programmatic SEO pages:** `/for/[role]/page.tsx` — 20 job title variants planned ❌ (not built yet)
 
 ### Product 3: PDF Compressor
-- **Status:** NOT BUILT, NOT CODED ❌ — nothing exists yet
-- **Plan:** Pure client-side (no API routes, no env vars), uses `pdf-lib` npm package
-- **No AI needed** — pure file-processing tool
-- **Price:** Free (AdSense revenue) or $5 one-time — decide at build time
-- **Cross-sells:** Add links to ATS Checker and Cover Letter Gen after deploy
+- **URL:** https://pdf-compressor-ecru-two.vercel.app
+- **Status:** BUILT & DEPLOYED ✅
+- **Vercel project root:** `pdf-compressor/`
+- **Price:** Free (AdSense monetization)
+- **Tech:** Pure client-side — `pdfjs-dist` + `pdf-lib`, no API routes, no env vars needed
+- **Pages:** Home + 8 programmatic SEO pages under `/compress/[useCase]/`
+- **Schema:** SoftwareApplication + FAQPage + HowTo + Organization + BreadcrumbList
+- **robots.ts:** Explicitly allows GPTBot, PerplexityBot, ClaudeBot, Google-Extended (AEO)
+- **Cross-sells:** Links to ATS Checker and Cover Letter Gen on home and all use-case pages ✅
+- **Still needed:** Add to Google Search Console + submit sitemap
 
 ### Product 4: LinkedIn Profile Optimizer
 - **URL:** https://linkedin-optimizer-livid.vercel.app *(verify this is still correct after deploy)*
@@ -385,7 +390,7 @@ tools-projects/
 │   │   └── robots.ts
 │   └── lib/claude.ts           # Groq client (getAIClient, AI_MODEL)
 │
-├── pdf-compressor/             # TO BUILD — pure client-side, pdf-lib, no API/env vars
+├── pdf-compressor/             # BUILT ✅ — pure client-side, pdfjs-dist + pdf-lib, 8 pSEO pages
 │
 ├── interview-prep/             # TO BUILD — copy linkedin-optimizer as base
 │   └── (same structure as above)
