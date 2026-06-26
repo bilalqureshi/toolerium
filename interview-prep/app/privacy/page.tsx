@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Privacy policy for AI Interview Prep. Learn how we handle your job description and interview data.",
   alternates: {
-    canonical: "https://interview-prep-ai.vercel.app/privacy",
+    canonical: "https://interview-prep-six-gules.vercel.app/privacy",
   },
   robots: { index: false, follow: false },
 };

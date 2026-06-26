@@ -403,7 +403,7 @@ function ResultContent() {
               Interview coming up? Prep with AI questions →
             </p>
             <a
-              href="https://interview-prep-ai.vercel.app"
+              href="https://interview-prep-six-gules.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 text-sm underline"

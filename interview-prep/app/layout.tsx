@@ -3,7 +3,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
 // TODO: Replace with your actual Vercel URL after first deploy
-const SITE_URL = "https://interview-prep-ai.vercel.app";
+const SITE_URL = "https://interview-prep-six-gules.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

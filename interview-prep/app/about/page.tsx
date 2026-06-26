@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     "Learn about AI Interview Prep — the free tool that generates tailored interview questions and STAR method answers from any job description.",
   alternates: {
-    canonical: "https://interview-prep-ai.vercel.app/about",
+    canonical: "https://interview-prep-six-gules.vercel.app/about",
   },
   openGraph: {
     title: "About — AI Interview Prep Tool",
     description:
       "The tool that turns any job description into 15 tailored interview questions with STAR method answers.",
-    url: "https://interview-prep-ai.vercel.app/about",
+    url: "https://interview-prep-six-gules.vercel.app/about",
   },
 };
 

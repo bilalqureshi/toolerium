@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Terms of service for AI Interview Prep. Read our usage terms, payment policy, and legal disclaimers.",
   alternates: {
-    canonical: "https://interview-prep-ai.vercel.app/terms",
+    canonical: "https://interview-prep-six-gules.vercel.app/terms",
   },
   robots: { index: false, follow: false },
 };

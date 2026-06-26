@@ -6,7 +6,7 @@ const structuredData = [
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "AI Interview Prep Tool",
-    url: "https://interview-prep-ai.vercel.app/",
+    url: "https://interview-prep-six-gules.vercel.app/",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Any",
     description:
