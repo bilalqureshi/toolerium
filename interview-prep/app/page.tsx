@@ -1,6 +1,24 @@
 "use client";
 import { useState } from "react";
 
+const ROLES = [
+  { slug: "software-engineer", label: "Software Engineer" },
+  { slug: "product-manager", label: "Product Manager" },
+  { slug: "data-scientist", label: "Data Scientist" },
+  { slug: "ux-designer", label: "UX Designer" },
+  { slug: "marketing-manager", label: "Marketing Manager" },
+  { slug: "financial-analyst", label: "Financial Analyst" },
+  { slug: "project-manager", label: "Project Manager" },
+  { slug: "sales-representative", label: "Sales Representative" },
+  { slug: "devops-engineer", label: "DevOps Engineer" },
+  { slug: "frontend-developer", label: "Frontend Developer" },
+  { slug: "backend-developer", label: "Backend Developer" },
+  { slug: "machine-learning-engineer", label: "Machine Learning Engineer" },
+  { slug: "business-analyst", label: "Business Analyst" },
+  { slug: "data-analyst", label: "Data Analyst" },
+  { slug: "cybersecurity-analyst", label: "Cybersecurity Analyst" },
+];
+
 const structuredData = [
   {
     "@context": "https://schema.org",
@@ -107,6 +125,17 @@ const structuredData = [
         },
       },
     ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "AI Interview Prep",
+    url: "https://interview-prep-six-gules.vercel.app",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "bqtools92@gmail.com",
+      contactType: "customer service",
+    },
   },
 ];
 
@@ -515,6 +544,26 @@ export default function Home() {
                 <p className="text-sm text-gray-500">{item.a}</p>
               </div>
             ))}
+          </div>
+          {/* Role-specific prep hub */}
+          <div className="mt-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
+              Interview Prep by Role
+            </h2>
+            <p className="text-center text-gray-500 text-sm mb-6">
+              Tailored questions and STAR answers for your specific job title.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {ROLES.map((r) => (
+                <a
+                  key={r.slug}
+                  href={`/for/${r.slug}`}
+                  className="block bg-white border rounded-xl p-4 hover:border-gray-400 hover:shadow-sm transition text-sm font-medium text-gray-800"
+                >
+                  {r.label} →
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </main>
