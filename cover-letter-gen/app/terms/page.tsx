@@ -33,7 +33,7 @@ export default function Terms() {
               Cover Letter Generator provides an AI-powered tool that generates a tailored cover
               letter based on a user's resume and a job description. A free preview is available
               to all users. An optional paid tier allows users to unlock, copy, and download the
-              full cover letter for a one-time fee of $3.
+              full cover letter for a one-time fee of $8.99.
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function Terms() {
           <div>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Payments and Refunds</h2>
             <p className="text-gray-600 mb-3">
-              The cover letter unlock is available for a one-time payment of $3. Payments are
+              The cover letter unlock is available for a one-time payment of $8.99. Payments are
               processed securely through Stripe. By completing a purchase, you agree to Stripe's
               terms and conditions.
             </p>

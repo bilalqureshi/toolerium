@@ -89,7 +89,7 @@ export default function About() {
           </p>
           <p className="text-gray-600">
             We keep the pricing simple: the profile analysis is always free, and
-            the full AI optimization is a flat one-time $5 with no subscription.
+            the full AI optimization is a flat one-time $5.99 with no subscription.
             We believe every professional deserves access to tools that can
             meaningfully improve their career opportunities.
           </p>
@@ -126,6 +126,19 @@ export default function About() {
               <p className="text-sm text-gray-500 mt-1">
                 Generate a tailored, ATS-friendly cover letter for any job in
                 seconds.
+              </p>
+            </a>
+            <a
+              href="https://pdf-compressor-ecru-two.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition"
+            >
+              <p className="font-semibold text-gray-900">
+                Free PDF Compressor
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Compress your resume or CV PDF before emailing it to recruiters.
               </p>
             </a>
           </div>

@@ -282,8 +282,8 @@ Track progress here — check off steps as completed.
 ### Phase 0 — Fix Before Adding Anything New (Day 1, ~2 hours)
 - [ ] 1. Raise ATS Checker price to $9 on Lemon Squeezy + update any `$3`/`$5` text in the UI
 - [ ] 2. Raise Cover Letter Gen price to $9 on Lemon Squeezy + update UI copy
-- [ ] 3. Scaffold + build PDF Compressor (not coded yet — use `pdf-lib`, pure client-side, no API routes)
-- [ ] 4. Add PDF Compressor cross-sell links in ATS Checker and Cover Letter Gen about pages after it's built
+- [x] 3. Scaffold + build PDF Compressor ✅ — built 2026-06-26, live at https://pdf-compressor-ecru-two.vercel.app
+- [ ] 4. Add PDF Compressor cross-sell links in ATS Checker and Cover Letter Gen about pages
 - [ ] 5. Verify LinkedIn Optimizer Vercel URL matches across `layout.tsx`, `sitemap.ts`, `robots.ts`, `checkout/route.ts`
 - [ ] 6. Add `GROQ_API_KEY` to all 4 Vercel projects and redeploy each
 
@@ -293,9 +293,9 @@ Track progress here — check off steps as completed.
 - [ ] 9. Post in r/recruitinghell — same playbook
 - [ ] 10. Post in r/jobs — same
 - [ ] 11. Write first LinkedIn "build in public" post with screenshot — post 8-10am PKT
-- [ ] 12. Submit PDF Compressor to Google Search Console + submit sitemap
-- [ ] 13. Resubmit Cover Letter Gen sitemap in Search Console (was showing "Couldn't fetch")
-- [ ] 14. Add LinkedIn Optimizer to Google Search Console
+- [x] 12. Submit PDF Compressor to Google Search Console + submit sitemap ✅ — done 2026-06-26
+- [x] 13. Resubmit Cover Letter Gen sitemap in Search Console ✅ — done 2026-06-26
+- [x] 14. Add LinkedIn Optimizer to Google Search Console ✅ — done 2026-06-26
 
 ### Phase 2 — SEO Expansion (Days 3-10)
 - [ ] 15. Add `/for/[role]/page.tsx` to ATS Checker — 20 job title variants with unique meta per page

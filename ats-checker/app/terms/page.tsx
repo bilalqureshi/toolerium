@@ -33,7 +33,7 @@ export default function Terms() {
               ATS Resume Checker provides an AI-powered tool that analyzes a user's resume against
               a job description to produce an ATS compatibility score, identify missing keywords,
               and offer optimization suggestions. An optional paid tier allows users to receive a
-              fully rewritten, ATS-optimized version of their resume for a one-time fee of $3.
+              fully rewritten, ATS-optimized version of their resume for a one-time fee of $8.99.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export default function Terms() {
           <div>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Payments and Refunds</h2>
             <p className="text-gray-600 mb-3">
-              The resume optimization service is available for a one-time payment of $3. Payments
+              The resume optimization service is available for a one-time payment of $8.99. Payments
               are processed securely through Stripe, a third-party payment processor. By
               completing a purchase, you agree to Stripe's terms and conditions.
             </p>

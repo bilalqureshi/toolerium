@@ -31,7 +31,7 @@ export default function Terms() {
           {[
             {
               title: "1. Description of Service",
-              body: "LinkedIn Profile Optimizer provides an AI-powered tool that analyzes a user's LinkedIn headline and About section to produce a profile strength score, identify missing keywords, and offer optimization suggestions. An optional paid tier provides a fully rewritten headline, About section, and recommended skills list for a one-time fee of $5.",
+              body: "LinkedIn Profile Optimizer provides an AI-powered tool that analyzes a user's LinkedIn headline and About section to produce a profile strength score, identify missing keywords, and offer optimization suggestions. An optional paid tier provides a fully rewritten headline, About section, and recommended skills list for a one-time fee of $5.99.",
             },
             {
               title: "2. Eligibility",
@@ -55,7 +55,7 @@ export default function Terms() {
             },
             {
               title: "7. Payments and Refunds",
-              body: "The profile optimization service is available for a one-time payment of $5. Payments are processed securely through Lemon Squeezy. Because the optimization is delivered instantly as a digital product, all sales are final and non-refundable, except where required by applicable law. If you experience a technical issue preventing delivery, please contact us at bqtools92@gmail.com.",
+              body: "The profile optimization service is available for a one-time payment of $5.99. Payments are processed securely through Lemon Squeezy. Because the optimization is delivered instantly as a digital product, all sales are final and non-refundable, except where required by applicable law. If you experience a technical issue preventing delivery, please contact us at bqtools92@gmail.com.",
             },
             {
               title: "8. Limitation of Liability",

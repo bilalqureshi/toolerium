@@ -230,7 +230,7 @@ function ResultContent() {
               </p>
             )}
             <p className="text-lg font-bold mb-1">Get Your AI-Optimized LinkedIn Profile</p>
-            <p className="text-gray-400 text-sm mb-2">What you unlock for $5:</p>
+            <p className="text-gray-400 text-sm mb-2">What you unlock for $5.99:</p>
             <ul className="text-gray-300 text-sm mb-6 space-y-1">
               <li>✓ Keyword-rich headline (max 220 chars)</li>
               <li>✓ Fully rewritten About section</li>
@@ -255,7 +255,7 @@ function ResultContent() {
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                 </svg>
               )}
-              {payLoading ? "Redirecting to checkout..." : "Optimize My LinkedIn Profile — $5"}
+              {payLoading ? "Redirecting to checkout..." : "Optimize My LinkedIn Profile — $5.99"}
             </button>
             <p className="text-gray-500 text-xs mt-3">One-time payment · No subscription</p>
           </div>
@@ -371,7 +371,7 @@ function ResultContent() {
         )}
 
         {/* Cross-sell */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-gray-50 border rounded-2xl p-5 text-center">
             <p className="text-sm font-medium text-gray-700 mb-1">
               Now optimize your resume for ATS →
@@ -396,6 +396,19 @@ function ResultContent() {
               className="text-blue-600 text-sm underline"
             >
               Free AI Cover Letter Generator
+            </a>
+          </div>
+          <div className="bg-gray-50 border rounded-2xl p-5 text-center">
+            <p className="text-sm font-medium text-gray-700 mb-1">
+              Compress your resume PDF before sending →
+            </p>
+            <a
+              href="https://pdf-compressor-ecru-two.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 text-sm underline"
+            >
+              Free PDF Compressor
             </a>
           </div>
         </div>

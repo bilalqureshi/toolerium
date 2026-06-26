@@ -23,7 +23,7 @@ const structuredData = [
       {
         "@type": "Offer",
         name: "Unlock Full Cover Letter",
-        price: "3",
+        price: "8.99",
         priceCurrency: "USD",
         description:
           "Unlock, copy, and download the full cover letter — one-time payment, no subscription",
@@ -61,7 +61,7 @@ const structuredData = [
         "@type": "HowToStep",
         position: 3,
         name: "Unlock and Download",
-        text: "Preview the cover letter free, then unlock the full version for $3 to copy or download. One-time payment, no subscription.",
+        text: "Preview the cover letter free, then unlock the full version for $8.99 to copy or download. One-time payment, no subscription.",
       },
     ],
   },
@@ -98,7 +98,7 @@ const structuredData = [
         name: "Is the cover letter generator free?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You can generate your cover letter and see a preview for free — no signup required. For $3 (one-time), you unlock the full letter to copy or download. There is no subscription or recurring charge.",
+          text: "You can generate your cover letter and see a preview for free — no signup required. For $8.99 (one-time), you unlock the full letter to copy or download. There is no subscription or recurring charge.",
         },
       },
       {
@@ -401,7 +401,7 @@ export default function Home() {
                       Your cover letter is ready!
                     </p>
                     <p className="text-gray-500 text-sm mb-4">
-                      Unlock the full version for $3
+                      Unlock the full version for $8.99
                     </p>
                     <button
                       onClick={handlePay}
@@ -432,7 +432,7 @@ export default function Home() {
                       )}
                       {payLoading
                         ? "Redirecting to checkout..."
-                        : "Unlock Full Cover Letter — $3"}
+                        : "Unlock Full Cover Letter — $8.99"}
                     </button>
                     <p className="text-gray-400 text-xs mt-3">
                       One-time payment. Instant download.
@@ -444,7 +444,7 @@ export default function Home() {
           )}
 
           {/* Cross-sell */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
               <p className="text-sm text-blue-700 font-medium mb-1">
                 Also check your resume ATS score before you apply →
@@ -469,6 +469,19 @@ export default function Home() {
                 className="text-blue-600 text-sm underline"
               >
                 Free LinkedIn Profile Optimizer
+              </a>
+            </div>
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+              <p className="text-sm text-blue-700 font-medium mb-1">
+                Sending your cover letter as PDF? Compress it first →
+              </p>
+              <a
+                href="https://pdf-compressor-ecru-two.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-sm underline"
+              >
+                Free PDF Compressor
               </a>
             </div>
           </div>
@@ -512,7 +525,7 @@ export default function Home() {
                 </h3>
                 <p className="text-sm text-gray-500">
                   Preview the cover letter free, then unlock the full version
-                  for $3 to copy or download. One-time payment, no subscription.
+                  for $8.99 to copy or download. One-time payment, no subscription.
                 </p>
               </div>
             </div>
@@ -614,7 +627,7 @@ export default function Home() {
               },
               {
                 q: "Is the cover letter generator free?",
-                a: "You can generate your cover letter and see a preview for free — no signup required. For $3 (one-time), you unlock the full letter to copy or download. There is no subscription or recurring charge.",
+                a: "You can generate your cover letter and see a preview for free — no signup required. For $8.99 (one-time), you unlock the full letter to copy or download. There is no subscription or recurring charge.",
               },
               {
                 q: "Can I edit the generated cover letter?",

@@ -81,9 +81,9 @@ export default function About() {
               <span className="text-green-500 font-bold mt-0.5">✓</span>
               <div>
                 <strong className="text-gray-900">
-                  Unlock &amp; Download ($3)
+                  Unlock &amp; Download ($8.99)
                 </strong>{" "}
-                — For a one-time fee of $3, unlock the full letter to copy or
+                — For a one-time fee of $8.99, unlock the full letter to copy or
                 download. No subscription or recurring charges.
               </div>
             </li>
@@ -102,10 +102,60 @@ export default function About() {
             the most relevant parts of your experience.
           </p>
           <p className="text-gray-600">
-            We price the full download at $3 — low enough that cost is never a
+            We price the full download at $8.99 — low enough that cost is never a
             barrier for someone in a job search, but enough to keep the service
             running sustainably. The generation and preview are always free.
           </p>
+        </div>
+
+        <div className="bg-white rounded-2xl border p-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            Also Try These Free Tools
+          </h2>
+          <div className="space-y-3">
+            <a
+              href="https://ats-checker-lake.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition"
+            >
+              <p className="font-semibold text-gray-900">
+                Free ATS Resume Checker
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Score your resume against any job description and see every
+                missing keyword.
+              </p>
+            </a>
+            <a
+              href="https://linkedin-optimizer-livid.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition"
+            >
+              <p className="font-semibold text-gray-900">
+                Free LinkedIn Profile Optimizer
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Score your LinkedIn headline and About section and get an
+                AI-powered rewrite that attracts recruiters.
+              </p>
+            </a>
+            <a
+              href="https://pdf-compressor-ecru-two.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition"
+            >
+              <p className="font-semibold text-gray-900">
+                Free PDF Compressor
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Compress your cover letter or resume PDF before emailing it to
+                recruiters.
+              </p>
+            </a>
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl border p-8">

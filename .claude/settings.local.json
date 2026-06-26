@@ -10,7 +10,19 @@
       "mcp__visualize__read_me",
       "mcp__visualize__show_widget",
       "Bash(npm run *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(grep -rn \"\\\\$3\\\\|\\\\$5\\\\|\\\\$9\\\\|\\\\$19\\\\|one-time\\\\|price\\\\|Price\\\\|\\\\$8\\\\|\\\\$6\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app --include=\"*.tsx\" --include=\"*.ts\")",
+      "Bash(grep -rn \"\\\\$3\\\\|\\\\$5\\\\|\\\\$9\\\\|\\\\$19\\\\|one-time\\\\|price\\\\|Price\\\\|\\\\$8\\\\|\\\\$6\" /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app --include=\"*.tsx\" --include=\"*.ts\")",
+      "Bash(grep -rn \"\\\\$3\\\\|\\\\$5\\\\|\\\\$9\\\\|\\\\$19\\\\|one-time\\\\|price\\\\|Price\\\\|\\\\$8\\\\|\\\\$6\" /Users/bilalmuhammadqureshi/Projects/tools-projects/linkedin-optimizer/app --include=\"*.tsx\" --include=\"*.ts\")",
+      "Bash(grep -rn \"\\\\$3\\\\|\\\\$5\\\\|\\\\$9\\\\|pdf.compressor\\\\|pdf-compressor\\\\|PDF Compressor\\\\|PDF compressor\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app --include=\"*.tsx\")",
+      "Bash(grep -rn \"\\\\$3\\\\|\\\\$5\\\\|\\\\$9\\\\|pdf.compressor\\\\|pdf-compressor\\\\|PDF Compressor\\\\|PDF compressor\" /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app --include=\"*.tsx\")",
+      "Bash(grep -rn \"\\\\$3\\\\|\\\\$5\\\\|\\\\$9\\\\|pdf.compressor\\\\|pdf-compressor\\\\|PDF Compressor\\\\|PDF compressor\" /Users/bilalmuhammadqureshi/Projects/tools-projects/linkedin-optimizer/app --include=\"*.tsx\")",
+      "Bash(grep -rn \"\\\\$3\\\\|\\\\$5\\\\b\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app --include=\"*.tsx\" --include=\"*.ts\")",
+      "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|cover.letter\\\\|linkedin\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app/result/page.tsx)",
+      "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|linkedin\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app/result/page.tsx)",
+      "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|cover.letter\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/linkedin-optimizer/app/result/page.tsx)",
+      "Bash(grep -n \"\\\\$3\\\\|\\\\$5\\\\b\\\\|one-time\\\\|Pay\\\\|pay\\\\|Unlock\\\\|unlock\\\\|checkout\\\\|ats.checker\\\\|linkedin\\\\|PDF\\\\|pdf\" /Users/bilalmuhammadqureshi/Projects/tools-projects/cover-letter-gen/app/page.tsx)",
+      "Bash(grep -n \"\\\\$3\\\\|one-time\" /Users/bilalmuhammadqureshi/Projects/tools-projects/ats-checker/app/about/page.tsx)"
     ]
   }
 }

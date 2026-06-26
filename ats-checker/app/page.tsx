@@ -23,7 +23,7 @@ const structuredData = [
       {
         "@type": "Offer",
         name: "AI Resume Optimization",
-        price: "3",
+        price: "8.99",
         priceCurrency: "USD",
         description:
           "Complete AI-powered resume rewrite optimized for ATS and the specific job description",
@@ -82,7 +82,7 @@ const structuredData = [
         name: "Is this ATS resume checker free?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, checking your ATS score, seeing missing keywords, and getting improvement suggestions is completely free — no signup required. If you want our AI to automatically rewrite and optimize your entire resume for the specific job posting, that is a one-time $3 fee with no subscription.",
+          text: "Yes, checking your ATS score, seeing missing keywords, and getting improvement suggestions is completely free — no signup required. If you want our AI to automatically rewrite and optimize your entire resume for the specific job posting, that is a one-time $8.99 fee with no subscription.",
         },
       },
       {
@@ -260,7 +260,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
               <p className="text-sm font-medium text-blue-700 mb-1">
                 Resume optimized? Now write the perfect cover letter →
@@ -285,6 +285,19 @@ export default function Home() {
                 className="text-blue-600 text-sm underline"
               >
                 Free LinkedIn Profile Optimizer
+              </a>
+            </div>
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+              <p className="text-sm font-medium text-blue-700 mb-1">
+                Need to email your resume? Compress the PDF first →
+              </p>
+              <a
+                href="https://pdf-compressor-ecru-two.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-sm underline"
+              >
+                Free PDF Compressor
               </a>
             </div>
           </div>
@@ -453,7 +466,7 @@ export default function Home() {
               },
               {
                 q: "Is this ATS resume checker free?",
-                a: "Yes, checking your ATS score, seeing missing keywords, and getting improvement suggestions is completely free — no signup required. If you want our AI to automatically rewrite and optimize your entire resume for the specific job posting, that is a one-time $3 fee with no subscription.",
+                a: "Yes, checking your ATS score, seeing missing keywords, and getting improvement suggestions is completely free — no signup required. If you want our AI to automatically rewrite and optimize your entire resume for the specific job posting, that is a one-time $8.99 fee with no subscription.",
               },
               {
                 q: "How is the ATS compatibility score calculated?",

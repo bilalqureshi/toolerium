@@ -23,7 +23,7 @@ const structuredData = [
       {
         "@type": "Offer",
         name: "AI LinkedIn Profile Optimization",
-        price: "5",
+        price: "5.99",
         priceCurrency: "USD",
         description:
           "Full AI-rewritten headline, About section, and recommended skills list",
@@ -83,7 +83,7 @@ const structuredData = [
         name: "Is the LinkedIn profile optimizer free?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Checking your profile score, seeing missing keywords, and getting 3 improvement tips is completely free with no signup required. The full AI-rewritten headline, About section, and recommended skills list is a one-time $5 — no subscription.",
+          text: "Checking your profile score, seeing missing keywords, and getting 3 improvement tips is completely free with no signup required. The full AI-rewritten headline, About section, and recommended skills list is a one-time $5.99 — no subscription.",
         },
       },
       {
@@ -526,7 +526,7 @@ export default function Home() {
               },
               {
                 q: "Is the LinkedIn profile optimizer free?",
-                a: "Checking your profile score, seeing missing keywords, and getting 3 improvement tips is completely free with no signup required. The full AI-rewritten headline, About section, and recommended skills list is a one-time $5 — no subscription.",
+                a: "Checking your profile score, seeing missing keywords, and getting 3 improvement tips is completely free with no signup required. The full AI-rewritten headline, About section, and recommended skills list is a one-time $5.99 — no subscription.",
               },
               {
                 q: "What does the AI rewrite include?",
