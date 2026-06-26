@@ -1,5 +1,5 @@
 # Project Handoff — Toolerium Micro-SaaS Factory
-**Last updated:** 2026-06-25  
+**Last updated:** 2026-06-26  
 **Repo:** `git@github.com:bilalqureshi/toolerium.git`  
 **Working directory:** `/Users/bilalmuhammadqureshi/Projects/tools-projects/`
 
@@ -21,7 +21,7 @@
 - **Payments:** Lemon Squeezy (store: `mbq.lemonsqueezy.com`)
 - **Hosting:** Vercel free tier — each product is its own Vercel project with its own Root Directory
 - **SEO:** `sitemap.ts`, `robots.ts`, JSON-LD structured data, canonical URLs in metadata
-- **Ads:** Google AdSense (applied/pending)
+- **Ads:** Google AdSense (applied/pending) — client: `ca-pub-4727099105535137`
 - **Environment variable for AI:** `GROQ_API_KEY` (get free key from console.groq.com)
 
 ---
@@ -37,8 +37,9 @@
 - **Payment flow:** user submits form → free score shown → pay $9 → `?paid=true` redirect → full rewrite unlocked
 - **localStorage keys:** `ats_result`, `paid`
 - **API routes:** `/api/score` (free, JSON), `/api/optimize` (paid, plain text), `/api/checkout`
-- **Cross-sells:** links to Cover Letter Gen ✅ | PDF Compressor ❌ (not added yet) | Interview Prep ❌ (not built yet)
-- **Programmatic SEO pages:** `/for/[role]/page.tsx` — 20 job title variants planned ❌ (not built yet)
+- **Cross-sells:** Cover Letter Gen ✅ | PDF Compressor ✅ | Interview Prep ✅
+- **About page cross-sells:** ATS about page has "Also Try These Free Tools" section with Cover Letter, LinkedIn, PDF Compressor ✅
+- **Programmatic SEO pages:** `/for/[role]/page.tsx` — TO BUILD ❌
 
 ### Product 2: AI Cover Letter Generator
 - **URL:** https://cover-letter-gen-rho.vercel.app
@@ -49,12 +50,13 @@
 - **Payment flow:** user fills form → free preview shown → pay $9 → `?paid=true` redirect → full letter unlocked
 - **localStorage keys:** `cl_data`, `paid`
 - **API routes:** `/api/generate` (paid, plain text), `/api/checkout`
-- **Cross-sells:** links to ATS Checker ✅ | PDF Compressor ❌ (not added yet) | Interview Prep ❌ (not built yet)
-- **Programmatic SEO pages:** `/for/[role]/page.tsx` — 20 job title variants planned ❌ (not built yet)
+- **Cross-sells on homepage:** ATS Checker ✅ | LinkedIn Optimizer ✅ | Interview Prep ✅ | (2×2 grid)
+- **About page cross-sells:** ATS Checker ✅ | LinkedIn Optimizer ✅ | PDF Compressor ✅
+- **Programmatic SEO pages:** `/for/[role]/page.tsx` — TO BUILD ❌
 
 ### Product 3: PDF Compressor
 - **URL:** https://pdf-compressor-ecru-two.vercel.app
-- **Status:** BUILT & DEPLOYED ✅
+- **Status:** LIVE ✅
 - **Vercel project root:** `pdf-compressor/`
 - **Price:** Free (AdSense monetization)
 - **Tech:** Pure client-side — `pdfjs-dist` + `pdf-lib`, no API routes, no env vars needed
@@ -62,48 +64,46 @@
 - **Schema:** SoftwareApplication + FAQPage + HowTo + Organization + BreadcrumbList
 - **robots.ts:** Explicitly allows GPTBot, PerplexityBot, ClaudeBot, Google-Extended (AEO)
 - **Cross-sells:** Links to ATS Checker and Cover Letter Gen on home and all use-case pages ✅
-- **Still needed:** Add to Google Search Console + submit sitemap
+- **Google Search Console:** submitted ✅
 
 ### Product 4: LinkedIn Profile Optimizer
-- **URL:** https://linkedin-optimizer-livid.vercel.app *(verify this is still correct after deploy)*
-- **Status:** BUILT, needs deploy verification ✅/⚠️
+- **URL:** https://linkedin-optimizer-livid.vercel.app
+- **Status:** LIVE ✅
 - **Vercel project root:** `linkedin-optimizer/`
 - **Lemon Squeezy product ID:** `08c6c473-3e26-471d-8b30-646ab8747be1`
 - **Price:** $9 one-time
 - **Payment flow:** user fills headline/about/targetRole/skills → free analysis (score, verdict, improvements, keywords) → pay $9 → optimized headline + about + skills unlocked
 - **localStorage keys:** `li_result`, `li_paid`
 - **API routes:** `/api/analyze` (free, JSON), `/api/optimize` (paid, JSON), `/api/checkout`
-- **Cross-sells:** links to ATS Checker and Cover Letter Gen in `/about` page ✅
-- **IMPORTANT:** After deploy, verify the actual Vercel URL matches `linkedin-optimizer-livid.vercel.app` across these files:
-  - `linkedin-optimizer/app/layout.tsx` (SITE_URL constant)
-  - `linkedin-optimizer/app/sitemap.ts`
-  - `linkedin-optimizer/app/robots.ts`
-  - `linkedin-optimizer/app/api/checkout/route.ts` (redirect URL)
+- **Cross-sells on result page:** Interview Prep ✅ | PDF Compressor ✅ | (2×2 grid with ATS, Cover Letter)
+- **About page cross-sells:** ATS Checker ✅ | Cover Letter ✅ | PDF Compressor ✅
 
-### Product 5: AI Interview Prep Tool (PLANNED — build next)
-- **Status:** NOT BUILT ❌
-- **Vercel project root:** `interview-prep/` (to be created)
-- **Price:** $19 one-time — DO NOT undercharge this, do not launch at less than $19
-- **Audience:** Software engineers, PMs, data scientists — anyone with a first-round interview
-- **Why $19:** Pre-interview anxiety drives high willingness to pay. Human interview coaches charge $200/hr. $19 is an easy yes.
-- **Payment flow:** user fills role + company + job description → free 3 sample questions shown → pay $19 → full 15 questions + STAR answers + follow-up tips unlocked
-- **API routes to build:**
-  - `/api/analyze` (free): returns 3 sample questions so user sees value
-  - `/api/generate` (paid): returns 15 questions + STAR-method answers + follow-up tips as JSON
-  - `/api/checkout`: Lemon Squeezy checkout, same pattern as other tools
-- **Base:** Copy LinkedIn Optimizer codebase — same form → analyze → pay → unlock pattern
-- **Cross-sells:** Add links from ATS Checker result page ("Interview coming up? →") and Cover Letter Gen result page
-- **SEO opportunity:** "software engineer interview questions Google", "PM behavioral interview questions", "STAR method answers data scientist" — 10k-100k monthly volume keywords with weak tool competition
-- **Build time:** 48 hours
+### Product 5: AI Interview Prep Tool
+- **URL:** https://interview-prep-six-gules.vercel.app
+- **Status:** LIVE ✅ — built and deployed 2026-06-26
+- **Vercel project root:** `interview-prep/`
+- **Lemon Squeezy product ID:** `05ae0e69-fe32-4f33-916f-4c4919c78300`
+- **Price:** $19 one-time — DO NOT lower this
+- **Payment flow:** user fills role + company + job description → 3 free sample questions → pay $19 → 15 questions + STAR answers + follow-up tips unlocked
+- **localStorage keys:** `ip_result`, `ip_paid`
+- **API routes:** `/api/analyze` (free, 3 questions), `/api/generate` (paid, 15 STAR Q&A), `/api/checkout`
+- **Cross-sells:** ATS Checker ✅ | Cover Letter Gen ✅ | LinkedIn Optimizer ✅
+- **About page cross-sells:** ATS ✅ | Cover Letter ✅ | LinkedIn ✅ | PDF Compressor ✅
+- **SEO:** 15 programmatic role pages at `/for/[role]/` ✅ (software-engineer, product-manager, data-scientist, ux-designer, marketing-manager, financial-analyst, project-manager, sales-representative, devops-engineer, frontend-developer, backend-developer, machine-learning-engineer, business-analyst, data-analyst, cybersecurity-analyst)
+- **Each role page has:** unique H1/meta/intro/tip, 10 sample questions, 4-question FAQ, BreadcrumbList + FAQPage + SoftwareApplication JSON-LD, hub links to all other role pages, cross-sells
+- **robots.ts:** AEO — allows GPTBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot, anthropic-ai, cohere-ai
+- **Google Search Console:** verification file added (`public/google2a4abc95d70e4f4a.html`) ✅ — click Verify in GSC to confirm
+- **Sitemap:** includes all 15 `/for/[role]/` pages at priority 0.8 ✅
+- **AdSense:** `ca-pub-4727099105535137` — plain `<script>` in `<head>` of layout.tsx ✅
 
-### Product 6: Salary Negotiation Script Generator (PLANNED — build after Interview Prep)
+### Product 6: Salary Negotiation Script Generator (PLANNED)
 - **Status:** NOT BUILT ❌
 - **Vercel project root:** `salary-negotiation/` (to be created)
 - **Price:** $15 one-time
 - **Audience:** Anyone who just received a job offer
 - **Payment flow:** inputs (current offer, target salary, job title, company, competing offers) → pay $15 → email script + talking points + rebuttals to common pushback
 - **Cross-sell:** Interview Prep result page → "Got the offer? Now negotiate it →"
-- **Build time:** 48 hours
+- **Build time:** ~48 hours
 
 ---
 
@@ -113,7 +113,7 @@
 - Previous prices ($3-5) were below the psychological trust threshold and killed conversion
 - Job seekers spend $200/hr on human career coaches — $9-19 for a tool is trivially cheap
 - Comparable tools: Resumeworded $19/mo, Jobscan $49/mo, Teal $29/mo
-- **Never go below $9 for ATS/Cover Letter, $19 for Interview Prep, $15 for Salary Negotiation**
+- **Never go below $9 for ATS/Cover Letter/LinkedIn, $19 for Interview Prep, $15 for Salary Negotiation**
 
 ### The Job Seeker OS Funnel
 The full suite walks one user through their entire job search:
@@ -131,7 +131,7 @@ A user who buys the full stack = $61 average order value. Focus on cross-sells b
 - Need ~1,000 quality visitors/day across all products
 - Average conversion 3%, average price ~$15 = $450/day
 - Add email follow-up funnel converting 1-2% of free users → closes the gap to $500
-- Timeline: realistically month 3-4 once SEO + Reddit + all 5 products are live
+- Timeline: realistically month 3-4 once SEO + Reddit + all 6 products are live
 
 ---
 
@@ -162,11 +162,11 @@ A user who buys the full stack = $61 average order value. Focus on cross-sells b
 - Space launches 4-6 weeks apart per product
 
 ### SEO — Programmatic Pages
-- Add `/for/[role]/page.tsx` to ATS Checker and Cover Letter Gen
-- 20 job title variants: software engineer, product manager, data scientist, nurse, teacher, marketing manager, UX designer, financial analyst, project manager, sales rep, etc.
-- Each page: unique H1 + meta description + JSON-LD, same tool underneath
-- Target: "ATS resume checker for software engineers", "cover letter generator for nurses" — 5k-50k monthly volume, low competition
-- Build time: 4 hours per product
+- Interview Prep `/for/[role]/` pages — 15 roles DONE ✅
+- ATS Checker `/for/[role]/page.tsx` — TO BUILD ❌
+- Cover Letter Gen `/for/[role]/page.tsx` — TO BUILD ❌
+- Target: "ATS resume checker for software engineers", "cover letter for nurses" — 5k-50k monthly volume, low competition
+- Build time: ~4 hours per product
 
 ### Email Capture (Phase 6)
 - Add "Email me my results" before showing free score on every tool
@@ -245,11 +245,34 @@ Each Vercel project needs ONE env var:
 
 ---
 
+## Critical Next.js Rules (Learned the Hard Way)
+
+1. **`postcss.config.mjs` is REQUIRED for Tailwind v4** — without it, page renders with no CSS (black background, raw HTML). Every product must have it:
+   ```js
+   const config = { plugins: { "@tailwindcss/postcss": {} } };
+   export default config;
+   ```
+
+2. **`next.config.ts` must use `turbopack: {}`** — webpack config breaks the build in Next.js 16.x:
+   ```ts
+   const nextConfig: NextConfig = { turbopack: {} };
+   ```
+
+3. **AdSense: use plain `<script>` in `<head>` of `layout.tsx`** — NOT Next.js `<Script>` component, which injects via JS and AdSense crawler can't see it.
+
+4. **`.gitignore` must be the FIRST file created in any new product directory** — before `package.json`, before `npm install`. If node_modules gets committed, recovery requires `git reset --soft origin/master`.
+
+5. **Groq client: never initialize at module level** — always lazy-init inside the exported function, or Vercel build breaks.
+
+---
+
 ## SEO Setup
 
-- `layout.tsx`: contains `SITE_URL` constant (no trailing slash), AdSense `<script>` tag directly in `<head>` (plain HTML `<script>`, NOT Next.js `<Script>` component — the Next.js component injects via JS and AdSense crawler can't see it)
+- `layout.tsx`: contains `SITE_URL` constant (no trailing slash), AdSense `<script>` tag directly in `<head>`
 - `sitemap.ts`: exports array of URLs, uses `SITE_URL` without trailing slash
-- `robots.ts`: disallows `/result` and `/api/`
+- `robots.ts`: disallows `/result` and `/api/`; explicitly allows AEO bots (GPTBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot, anthropic-ai, cohere-ai)
+- Schema markup: `SoftwareApplication` (not `WebApplication`), `FAQPage`, `HowTo`, `Organization`, `BreadcrumbList`
+- Programmatic SEO: `generateStaticParams()` + `generateMetadata()` in `/for/[role]/page.tsx`
 - Google Search Console: use URL prefix verification (meta tag method), NOT domain/DNS verification
 - Sitemap submission: enter only `sitemap.xml` (relative), not full URL
 
@@ -267,77 +290,82 @@ Each Vercel project needs ONE env var:
 
 5. **Switching AI providers twice** — Anthropic (paid) → Gemini (still paid) → Groq (actually free). The correct provider is Groq. Don't revisit this.
 
-6. **localStorage collision risk** — Different products must use namespaced keys. ATS: `ats_result`/`paid`. Cover Letter: `cl_data`/`paid`. LinkedIn: `li_result`/`li_paid`. They run on different domains so collision isn't a real risk, but the namespacing is already in place.
+6. **localStorage collision risk** — Different products must use namespaced keys. ATS: `ats_result`/`paid`. Cover Letter: `cl_data`/`paid`. LinkedIn: `li_result`/`li_paid`. Interview Prep: `ip_result`/`ip_paid`.
 
-7. **SSR guard on localStorage** — LinkedIn Optimizer's `isPaid` check wraps localStorage access in `typeof window !== "undefined"` to avoid Next.js SSR errors. Don't remove this.
+7. **SSR guard on localStorage** — wrap all localStorage access in `typeof window !== "undefined"` to avoid Next.js SSR errors.
 
 8. **Underpricing** — Launched ATS Checker and Cover Letter Gen at $3-5. This is below the trust threshold for job seekers and destroys revenue. $9 minimum for these tools, $19 for Interview Prep. Do not go lower.
+
+9. **node_modules committed to git** — ran `npm install` before creating `.gitignore`. Recovery: `git reset --soft origin/master`, then selectively re-stage only source files. Prevention: `.gitignore` FIRST, always.
+
+10. **Unstyled page after deploy** — missing `postcss.config.mjs`. Every new product needs this file. Copy from `linkedin-optimizer/postcss.config.mjs`.
 
 ---
 
 ## Master Step-by-Step Execution List
 
-Track progress here — check off steps as completed.
-
-### Phase 0 — Fix Before Adding Anything New (Day 1, ~2 hours)
-- [ ] 1. Raise ATS Checker price to $9 on Lemon Squeezy + update any `$3`/`$5` text in the UI
-- [ ] 2. Raise Cover Letter Gen price to $9 on Lemon Squeezy + update UI copy
-- [x] 3. Scaffold + build PDF Compressor ✅ — built 2026-06-26, live at https://pdf-compressor-ecru-two.vercel.app
-- [ ] 4. Add PDF Compressor cross-sell links in ATS Checker and Cover Letter Gen about pages
+### Phase 0 — Fix Before Adding Anything New ✅ (mostly done)
+- [ ] 1. Raise ATS Checker price to $9 on Lemon Squeezy dashboard + update any `$3`/`$5` text in UI
+- [ ] 2. Raise Cover Letter Gen price to $9 on Lemon Squeezy dashboard + update UI copy
+- [x] 3. Scaffold + build PDF Compressor ✅
+- [x] 4. Add PDF Compressor cross-sell links across all products ✅
 - [ ] 5. Verify LinkedIn Optimizer Vercel URL matches across `layout.tsx`, `sitemap.ts`, `robots.ts`, `checkout/route.ts`
-- [ ] 6. Add `GROQ_API_KEY` to all 4 Vercel projects and redeploy each
+- [ ] 6. Add `GROQ_API_KEY` to all 5 Vercel projects and redeploy each
 
-### Phase 1 — Distribution for Existing Products (Days 1-7)
+### Phase 1 — Distribution for Existing Products
 - [ ] 7. Post in r/resumes — genuine helpful answer, mention free ATS score at end
 - [ ] 8. Post in r/cscareerquestions — same playbook
 - [ ] 9. Post in r/recruitinghell — same playbook
 - [ ] 10. Post in r/jobs — same
 - [ ] 11. Write first LinkedIn "build in public" post with screenshot — post 8-10am PKT
-- [x] 12. Submit PDF Compressor to Google Search Console + submit sitemap ✅ — done 2026-06-26
-- [x] 13. Resubmit Cover Letter Gen sitemap in Search Console ✅ — done 2026-06-26
-- [x] 14. Add LinkedIn Optimizer to Google Search Console ✅ — done 2026-06-26
+- [x] 12. Submit PDF Compressor to Google Search Console + submit sitemap ✅
+- [x] 13. Resubmit Cover Letter Gen sitemap in Search Console ✅
+- [x] 14. Add LinkedIn Optimizer to Google Search Console ✅
+- [ ] 15. Verify Interview Prep in Google Search Console (GSC verification file deployed — click Verify) ✅ file ready
+- [ ] 16. Submit interview-prep sitemap.xml in GSC (includes 15 /for/[role]/ pages)
 
-### Phase 2 — SEO Expansion (Days 3-10)
-- [ ] 15. Add `/for/[role]/page.tsx` to ATS Checker — 20 job title variants with unique meta per page
-- [ ] 16. Add `/for/[role]/page.tsx` to Cover Letter Gen — same 20 job titles
-- [ ] 17. Update metadata + JSON-LD on each programmatic page with role-specific title/description
+### Phase 2 — SEO Expansion
+- [x] 17. Interview Prep `/for/[role]/` — 15 role pages DONE ✅
+- [ ] 18. Add `/for/[role]/page.tsx` to ATS Checker — same 15 roles, unique content per page
+- [ ] 19. Add `/for/[role]/page.tsx` to Cover Letter Gen — same 15 roles
 
-### Phase 3 — Build Interview Prep Tool (Days 5-10)
-- [ ] 18. Scaffold `interview-prep/` by copying LinkedIn Optimizer codebase
-- [ ] 19. Build form: inputs are target role, company name, job description (paste)
-- [ ] 20. Build `/api/analyze` (free): returns 3 sample questions
-- [ ] 21. Build `/api/generate` (paid): returns 15 questions + STAR answers + follow-up tips as JSON
-- [ ] 22. Build `/api/checkout`: Lemon Squeezy at $19 — same pattern as other tools
-- [ ] 23. Set Lemon Squeezy price to $19 — do not change this
-- [ ] 24. Add cross-sell links from ATS Checker and Cover Letter Gen result pages to Interview Prep
-- [ ] 25. Deploy to Vercel, add to Search Console, submit sitemap
+### Phase 3 — Build Interview Prep Tool ✅ DONE
+- [x] 20. Scaffold `interview-prep/` ✅
+- [x] 21. Build form: target role, company name, job description ✅
+- [x] 22. Build `/api/analyze` (free, 3 questions) ✅
+- [x] 23. Build `/api/generate` (paid, 15 STAR Q&A) ✅
+- [x] 24. Build `/api/checkout` at $19 ✅
+- [x] 25. Add cross-sell links from all other products ✅
+- [x] 26. Deploy to Vercel ✅ — https://interview-prep-six-gules.vercel.app
+- [x] 27. Expert SEO: 15 programmatic role pages, AEO robots, schema markup ✅
 
 ### Phase 4 — Launch Burst (Week 2)
-- [ ] 26. Line up 25 upvoters for ProductHunt launch day (LinkedIn connections, WhatsApp contacts)
-- [ ] 27. Find a ProductHunt hunter with 1k+ followers (post in r/producthunt)
-- [ ] 28. Launch ATS Checker on ProductHunt — Tuesday-Thursday, 9am EST
-- [ ] 29. Post "Show HN: I built an ATS resume checker that shows why your resume got rejected" on Hacker News
-- [ ] 30. Share launch post on LinkedIn same day
+- [ ] 28. Line up 25 upvoters for ProductHunt launch day
+- [ ] 29. Find a ProductHunt hunter with 1k+ followers (post in r/producthunt)
+- [ ] 30. Launch ATS Checker on ProductHunt — Tuesday-Thursday, 9am EST
+- [ ] 31. Post "Show HN: I built an ATS resume checker that shows why your resume got rejected"
+- [ ] 32. Share launch post on LinkedIn same day
 
-### Phase 5 — Build Salary Negotiation Tool (Days 14-18)
-- [ ] 31. Scaffold `salary-negotiation/` — copy Interview Prep base
-- [ ] 32. Form inputs: current offer, target salary, job title, company, competing offers (optional)
-- [ ] 33. Output: email script + talking points + rebuttals to common pushback
-- [ ] 34. Set Lemon Squeezy price to $15
-- [ ] 35. Add cross-sell from Interview Prep result page: "Got the offer? Now negotiate it →"
-- [ ] 36. Deploy + Search Console + sitemap
+### Phase 5 — Build Salary Negotiation Tool
+- [ ] 33. Create `.gitignore` FIRST in `salary-negotiation/`, then scaffold
+- [ ] 34. Copy `interview-prep/` as base (same form → pay → unlock pattern)
+- [ ] 35. Form inputs: current offer, target salary, job title, company, competing offers
+- [ ] 36. Output: email script + talking points + rebuttals
+- [ ] 37. Set Lemon Squeezy price to $15
+- [ ] 38. Add cross-sell from Interview Prep result page: "Got the offer? Now negotiate it →"
+- [ ] 39. Deploy + Search Console + sitemap
 
 ### Phase 6 — Email Capture (Week 3)
-- [ ] 37. Add "Email me my results" capture to every free result page across all tools
-- [ ] 38. Set up Resend or Brevo free tier to store emails and send
-- [ ] 39. Write follow-up email: sent 24hrs after capture, includes result summary + cross-sell link
+- [ ] 40. Add "Email me my results" capture to every free result page across all tools
+- [ ] 41. Set up Resend or Brevo free tier
+- [ ] 42. Write follow-up email: sent 24hrs after capture, result summary + cross-sell link
 
 ### Phase 7 — Ongoing (Weekly)
-- [ ] 40. Post 3x/week on Reddit across job seeker subs — rotate products, always answer first
-- [ ] 41. Post 2x/week on LinkedIn — metrics, learnings, screenshots
-- [ ] 42. Check Search Console weekly — find which programmatic pages get impressions, double down on those roles
-- [ ] 43. Launch Cover Letter Gen on ProductHunt (4-6 weeks after ATS Checker launch)
-- [ ] 44. Launch Interview Prep on ProductHunt (4-6 weeks after Cover Letter Gen launch)
+- [ ] 43. Post 3x/week on Reddit across job seeker subs
+- [ ] 44. Post 2x/week on LinkedIn — metrics, learnings, screenshots
+- [ ] 45. Check Search Console weekly — find which programmatic pages get impressions, double down
+- [ ] 46. Launch Cover Letter Gen on ProductHunt (4-6 weeks after ATS Checker launch)
+- [ ] 47. Launch Interview Prep on ProductHunt (4-6 weeks after Cover Letter Gen launch)
 
 ---
 
@@ -348,55 +376,72 @@ tools-projects/
 ├── ats-checker/
 │   ├── app/
 │   │   ├── layout.tsx          # SITE_URL, AdSense <script> in <head>
-│   │   ├── page.tsx            # Resume + JD input form
-│   │   ├── result/page.tsx     # Free score + paid rewrite display
-│   │   ├── about/page.tsx      # Cross-sells to Cover Letter Gen
-│   │   ├── for/[role]/page.tsx # Programmatic SEO — 20 job titles (TO BUILD)
+│   │   ├── page.tsx            # Resume + JD input form, cross-sell grid (3 cols)
+│   │   ├── result/page.tsx     # Free score + paid rewrite + cross-sell grid (3 cols)
+│   │   ├── about/page.tsx      # "Also Try These Free Tools" section ✅
+│   │   ├── for/[role]/page.tsx # Programmatic SEO — TO BUILD ❌
 │   │   ├── api/
-│   │   │   ├── score/route.ts      # POST — free, returns JSON {score, missing_keywords, suggestions}
-│   │   │   ├── optimize/route.ts   # POST — paid, returns {result: string}
-│   │   │   └── checkout/route.ts   # POST — creates LS checkout URL
+│   │   │   ├── score/route.ts
+│   │   │   ├── optimize/route.ts
+│   │   │   └── checkout/route.ts
 │   │   ├── sitemap.ts
 │   │   └── robots.ts
-│   └── lib/claude.ts           # Groq client (getAIClient, AI_MODEL)
+│   └── lib/claude.ts
 │
 ├── cover-letter-gen/
 │   ├── app/
 │   │   ├── layout.tsx
-│   │   ├── page.tsx            # Resume + job details form
-│   │   ├── result/page.tsx     # Free preview + paid full letter
-│   │   ├── about/page.tsx      # Cross-sells to ATS Checker
-│   │   ├── for/[role]/page.tsx # Programmatic SEO — 20 job titles (TO BUILD)
+│   │   ├── page.tsx            # cross-sell grid (2×2: ATS, LinkedIn, Interview Prep, PDF)
+│   │   ├── result/page.tsx
+│   │   ├── about/page.tsx      # "Also Try These Free Tools" ✅
+│   │   ├── for/[role]/page.tsx # Programmatic SEO — TO BUILD ❌
 │   │   ├── api/
-│   │   │   ├── generate/route.ts   # POST — returns {result: string}
+│   │   │   ├── generate/route.ts
 │   │   │   └── checkout/route.ts
 │   │   ├── sitemap.ts
 │   │   └── robots.ts
-│   └── lib/claude.ts           # Groq client (getAIClient, AI_MODEL)
+│   └── lib/claude.ts
 │
 ├── linkedin-optimizer/
 │   ├── app/
 │   │   ├── layout.tsx          # SITE_URL = "https://linkedin-optimizer-livid.vercel.app"
-│   │   ├── page.tsx            # headline/about/targetRole/skills form
-│   │   ├── result/page.tsx     # Free analysis + paid optimized profile
-│   │   ├── about/page.tsx      # Cross-sells to ATS + Cover Letter
-│   │   ├── privacy/page.tsx    # Contact: bqtools92@gmail.com, noindex
-│   │   ├── terms/page.tsx      # One-time $5, all sales final, not affiliated with LinkedIn
+│   │   ├── page.tsx
+│   │   ├── result/page.tsx     # cross-sell grid (2×2: ATS, Cover Letter, Interview Prep, PDF)
+│   │   ├── about/page.tsx      # "Also Try These Free Tools" ✅
+│   │   ├── privacy/page.tsx
+│   │   ├── terms/page.tsx
 │   │   ├── api/
-│   │   │   ├── analyze/route.ts    # POST — free, returns {score, verdict, improvements, missing_keywords}
-│   │   │   ├── optimize/route.ts   # POST — paid, returns {headline, about, recommended_skills}
+│   │   │   ├── analyze/route.ts
+│   │   │   ├── optimize/route.ts
 │   │   │   └── checkout/route.ts
 │   │   ├── sitemap.ts
 │   │   └── robots.ts
-│   └── lib/claude.ts           # Groq client (getAIClient, AI_MODEL)
+│   └── lib/claude.ts
 │
-├── pdf-compressor/             # BUILT ✅ — pure client-side, pdfjs-dist + pdf-lib, 8 pSEO pages
+├── pdf-compressor/             # LIVE ✅ — free, pdfjs-dist + pdf-lib, 8 pSEO pages
 │
-├── interview-prep/             # TO BUILD — copy linkedin-optimizer as base
-│   └── (same structure as above)
+├── interview-prep/             # LIVE ✅ — built 2026-06-26
+│   ├── app/
+│   │   ├── layout.tsx          # SITE_URL = "https://interview-prep-six-gules.vercel.app"
+│   │   ├── page.tsx            # form + role hub grid (15 roles) + cross-sells
+│   │   ├── result/page.tsx     # 3 sample questions free, 15 STAR Q&A paid
+│   │   ├── about/page.tsx
+│   │   ├── privacy/page.tsx
+│   │   ├── terms/page.tsx
+│   │   ├── for/[role]/page.tsx # 15 role pages ✅ (pSEO)
+│   │   ├── api/
+│   │   │   ├── analyze/route.ts    # free, 3 questions
+│   │   │   ├── generate/route.ts   # paid, 15 STAR Q&A
+│   │   │   └── checkout/route.ts   # LS product 05ae0e69-fe32-4f33-916f-4c4919c78300
+│   │   ├── sitemap.ts          # includes all 15 /for/[role]/ URLs
+│   │   └── robots.ts           # AEO bots allowed
+│   ├── lib/claude.ts
+│   ├── postcss.config.mjs      # REQUIRED — Tailwind v4
+│   └── public/
+│       └── google2a4abc95d70e4f4a.html  # GSC verification ✅
 │
-└── salary-negotiation/         # TO BUILD after interview-prep
-    └── (same structure as above)
+└── salary-negotiation/         # TO BUILD next
+    └── (copy interview-prep as base)
 ```
 
 ---
